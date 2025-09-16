@@ -15,12 +15,12 @@
     body {
       margin: 0;
       height: 100vh;
-      background-color: var(--peach); /* Peach background */
+      background-color: var(--peach);
       display: flex;
       justify-content: center;
       align-items: center;
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      color: var(--peach); /* Default text inside black box */
+      color: var(--peach);
       animation: fadeIn 0.8s ease-in;
     }
 
@@ -30,9 +30,8 @@
     }
 
     .container {
-      background-color: var(--black); /* BLACK box */
-      border: 2px solid var(--blue-dark); /* Blue border */
-      box-shadow: 0 8px 30px rgba(115, 158, 201, 0.4); /* Light blue shadow */
+      background-color: var(--black);
+      border: 2px solid var(--blue-dark);
       border-radius: 16px;
       padding: 40px 50px;
       display: flex;
@@ -41,6 +40,12 @@
       align-items: center;
       width: 340px;
       animation: popIn 0.6s ease;
+
+      /* GLOWING EFFECT */
+      box-shadow:
+        0 0 10px rgba(115, 158, 201, 0.6),
+        0 0 20px rgba(86, 130, 177, 0.4),
+        0 0 30px rgba(115, 158, 201, 0.2);
     }
 
     @keyframes popIn {
@@ -48,9 +53,15 @@
       to { transform: scale(1); opacity: 1; }
     }
 
+    h1 {
+      margin-top: 0;
+      font-size: 1.5rem;
+      color: var(--peach);
+    }
+
     .btn {
-      background-color: var(--blue-dark); /* Button base */
-      color: var(--black); /* Button text = black for contrast */
+      background-color: var(--blue-dark);
+      color: var(--black);
       border: 2px solid var(--blue-light);
       border-radius: 10px;
       padding: 14px 24px;
@@ -61,11 +72,11 @@
       text-align: center;
       text-decoration: none;
       transition: all 0.3s ease;
-      box-shadow: 0 4px 12px rgba(115, 158, 201, 0.3); /* Light blue shadow */
+      box-shadow: 0 4px 12px rgba(115, 158, 201, 0.3);
     }
 
     .btn:hover, .btn:focus {
-      background-color: var(--blue-light); /* Lighter on hover */
+      background-color: var(--blue-light);
       color: var(--black);
       transform: scale(1.04);
       box-shadow: 0 8px 18px rgba(115, 158, 201, 0.5);
@@ -82,33 +93,30 @@
         padding: 30px 20px;
       }
     }
-
-    h1 {
-      margin-top: 0;
-      font-size: 1.5rem;
-      color: var(--peach);
-    }
   </style>
 </head>
 <body>
   <div class="container" role="main" aria-label="Submission Links">
     <h1> Submission Links</h1>
 
-    <a href="https://www.figma.com/design/AzqAX55SsVozuhBBbXwwEP/Untitled?node-id=0-1&t=6IoWYX0h2sUR2nJv-1" 
+    <!-- Open Figma Design -->
+    <a href="https://www.figma.com/design/NNNXeqSuXOiBKoVSgFZUjj/Figma-basics?node-id=975-624&t=sNuDZJ4aTn2Sz4d1-1" 
        target="_blank" 
        rel="noopener noreferrer" 
        class="btn" 
        aria-label="Open Figma design link in new tab"
     >
-      Open Figma Design
+       Open Figma Design
     </a>
 
+    <!-- View PDF instead of Download -->
     <a href="wireframe.pdf" 
        class="btn" 
-       download="wireframe.pdf" 
-       aria-label="Download wireframe PDF file"
+       target="_blank" 
+       rel="noopener noreferrer" 
+       aria-label="View wireframe PDF in new tab"
     >
-      Download Wireframe PDF
+       View Wireframe PDF
     </a>
   </div>
 </body>
