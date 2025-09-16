@@ -5,58 +5,102 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Submission Links</title>
   <style>
+    :root {
+      --black: #000000;
+      --blue-dark: #5682B1;
+      --blue-light: #739EC9;
+      --peach: #FFE8DB;
+    }
+
     body {
       margin: 0;
       height: 100vh;
-      background: #f3f0ff; /* light violet */
+      background-color: var(--peach); /* Peach background */
       display: flex;
       justify-content: center;
       align-items: center;
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      color: #3a0ca3; /* dark violet */
+      color: var(--peach); /* Default text inside black box */
+      animation: fadeIn 0.8s ease-in;
     }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(10px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
     .container {
-      background: white;
-      padding: 40px 60px;
-      border-radius: 12px;
-      box-shadow: 0 8px 20px rgba(58, 12, 163, 0.2);
+      background-color: var(--black); /* BLACK box */
+      border: 2px solid var(--blue-dark); /* Blue border */
+      box-shadow: 0 8px 30px rgba(115, 158, 201, 0.4); /* Light blue shadow */
+      border-radius: 16px;
+      padding: 40px 50px;
       display: flex;
       flex-direction: column;
       gap: 24px;
       align-items: center;
-      width: 320px;
+      width: 340px;
+      animation: popIn 0.6s ease;
     }
+
+    @keyframes popIn {
+      from { transform: scale(0.95); opacity: 0; }
+      to { transform: scale(1); opacity: 1; }
+    }
+
     .btn {
-      background: #720026; /* dark violet */
-      color: white;
-      border: none;
-      border-radius: 8px;
+      background-color: var(--blue-dark); /* Button base */
+      color: var(--black); /* Button text = black for contrast */
+      border: 2px solid var(--blue-light);
+      border-radius: 10px;
       padding: 14px 24px;
-      font-size: 1.1rem;
+      font-size: 1.05rem;
+      font-weight: 600;
       cursor: pointer;
       width: 100%;
       text-align: center;
       text-decoration: none;
-      user-select: none;
-      transition: background 0.3s ease;
-      box-shadow: 0 4px 12px rgba(114, 0, 38, 0.4);
+      transition: all 0.3s ease;
+      box-shadow: 0 4px 12px rgba(115, 158, 201, 0.3); /* Light blue shadow */
     }
+
     .btn:hover, .btn:focus {
-      background: #9f2a63; /* lighter violet hover */
+      background-color: var(--blue-light); /* Lighter on hover */
+      color: var(--black);
+      transform: scale(1.04);
+      box-shadow: 0 8px 18px rgba(115, 158, 201, 0.5);
       outline: none;
+    }
+
+    .btn:active {
+      transform: scale(0.96);
+    }
+
+    @media (max-width: 400px) {
+      .container {
+        width: 90%;
+        padding: 30px 20px;
+      }
+    }
+
+    h1 {
+      margin-top: 0;
+      font-size: 1.5rem;
+      color: var(--peach);
     }
   </style>
 </head>
 <body>
   <div class="container" role="main" aria-label="Submission Links">
+    <h1> Submission Links</h1>
 
-    <a href="https://www.figma.com/design/NNNXeqSuXOiBKoVSgFZUjj/Figma-basics?node-id=975-624&t=sNuDZJ4aTn2Sz4d1-1" 
+    <a href="https://www.figma.com/design/AzqAX55SsVozuhBBbXwwEP/Untitled?node-id=0-1&t=6IoWYX0h2sUR2nJv-1" 
        target="_blank" 
        rel="noopener noreferrer" 
        class="btn" 
        aria-label="Open Figma design link in new tab"
     >
-      Open Figma Link
+      Open Figma Design
     </a>
 
     <a href="wireframe.pdf" 
@@ -66,7 +110,6 @@
     >
       Download Wireframe PDF
     </a>
-
   </div>
 </body>
 </html>
