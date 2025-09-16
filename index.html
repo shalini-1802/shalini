@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Submission Links</title>
+  <style>
+    body {
+      margin: 0;
+      height: 100vh;
+      background: #f3f0ff; /* light violet */
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      color: #3a0ca3; /* dark violet */
+    }
+    .container {
+      background: white;
+      padding: 40px 60px;
+      border-radius: 12px;
+      box-shadow: 0 8px 20px rgba(58, 12, 163, 0.2);
+      display: flex;
+      flex-direction: column;
+      gap: 24px;
+      align-items: center;
+      width: 320px;
+    }
+    .btn {
+      background: #720026; /* dark violet */
+      color: white;
+      border: none;
+      border-radius: 8px;
+      padding: 14px 24px;
+      font-size: 1.1rem;
+      cursor: pointer;
+      width: 100%;
+      text-align: center;
+      text-decoration: none;
+      user-select: none;
+      transition: background 0.3s ease;
+      box-shadow: 0 4px 12px rgba(114, 0, 38, 0.4);
+    }
+    .btn:hover, .btn:focus {
+      background: #9f2a63; /* lighter violet hover */
+      outline: none;
+    }
+  </style>
+</head>
+<body>
+  <div class="container" role="main" aria-label="Submission Links">
+
+    <a href="https://www.figma.com/design/NNNXeqSuXOiBKoVSgFZUjj/Figma-basics?node-id=975-624&t=sNuDZJ4aTn2Sz4d1-1" 
+       target="_blank" 
+       rel="noopener noreferrer" 
+       class="btn" 
+       aria-label="Open Figma design link in new tab"
+    >
+      Open Figma Link
+    </a>
+
+    <a href="wireframe.pdf" 
+       class="btn" 
+       download="wireframe.pdf" 
+       aria-label="Download wireframe PDF file"
+    >
+      Download Wireframe PDF
+    </a>
+
+  </div>
+</body>
+</html>
